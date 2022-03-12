@@ -1,16 +1,3 @@
-// Disabling colors
-const unused_colors = ["Orange", "Teal", "Blue", "Pink", "Brown"];
-unused_colors.forEach((color) => {
-    [...document.querySelectorAll(`[aria-label="${color}"]`)].forEach((el) => {
-        el.style.display = 'none';
-    });
-});
-
-// Disabling backgrounds
-[...document.querySelectorAll('[aria-label="2 of 2: Background: 10 options. Select to add note background."]')].forEach((el) => {
-    el.style.display = 'none';
-});
-
 // Handling keys
 const click = (el) => {
     el.dispatchEvent(new MouseEvent('mousedown'));
