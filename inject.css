@@ -1,0 +1,7 @@
+[aria-label="Orange"], [aria-label="Green"], [aria-label="Teal"], [aria-label="Blue"], [aria-label="Pink"], [aria-label="Brown"] {
+    display: none !important;
+}
+
+[aria-label="2 of 2: Background: 10 options. Select to add note background."] {
+    display: none !important;
+}
