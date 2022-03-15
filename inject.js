@@ -48,7 +48,7 @@ const handlers = {
         // Closing palette if currently inside palette, else open palette
         if (!close_one_palette(e, current_el)) {
             // used j or k to focus element
-            const keyboard_focused = current_el.querySelector("div > div > div[aria-label=\"Background options\"]");
+            const keyboard_focused = current_el.matches(selectors.palette_button_relative) ? current_el : current_el.querySelector(selectors.palette_button_relative);
             if (keyboard_focused && keyboard_focused.clientWidth > 0) {
                 click(keyboard_focused);
                 return;
