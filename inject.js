@@ -92,6 +92,11 @@ const handlers = {
     'g': (e) => {
         handle_color(e, 'Gray');
     },
+    'Escape': (e) => {
+	if (!close_one_palette(e, document.activeElement)) {
+	    document.querySelector("#dummy-link-element").focus({preventScroll:true});
+	}
+    },
 };
 
 document.addEventListener("keydown", (e) => {
@@ -99,3 +104,11 @@ document.addEventListener("keydown", (e) => {
         handlers[e.key](e);
     }
 });
+
+// dummy link for focusing
+document.querySelector("body").append((() => {
+    const dummy_el = document.createElement("a");
+    dummy_el.setAttribute("id","dummy-link-element");
+    dummy_el.setAttribute("href","");
+    return dummy_el;
+})());
